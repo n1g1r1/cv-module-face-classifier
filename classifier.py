@@ -3,4 +3,6 @@ def classify(recognizer, image):
 
     label_id, confidence = recognizer.predict(image)
 
-    return label_id, confidence
+    label = recognizer.getLabelInfo(label_id)
+
+    return label, confidence
